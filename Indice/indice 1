@@ -1,0 +1,128 @@
+//Link para atalhos https://www.w3schools.com
+
+const cores = ['Red', 'green', 'Blue', 'Yellow'];
+        console.log(cores[3])
+        
+        //Adicionar elemento no final da arrays
+        cores.push('Roxo');
+        console.log(cores);
+
+        //Remover um elemento
+        let cor = cores.pop();
+        console.log(cores);
+
+        //Adicionar no inicio do array
+        cores.unshift('darkgreen')
+        console.log(cores)
+
+        //Remover do inico do array
+        cor = cores.shift();
+        console.log(cores)
+        console.log(cor)
+
+        //Adiiconar ou romver em qualquer posição
+        cores.splice(1, 1);
+        console.log(cores);
+        //usar o 1, 0 (serve para dizer que não vou remover nenhum elemento)
+        cores.splice(1, 0, "white", "Black")
+        console.log(cores)
+
+        cores.splice(1, 2);
+        console.log(cores);
+
+        //adicionar elementos para separar os arrays
+        //console.log(cores.join(' - '))
+
+        //O join converte o array para string, para transformar em array novamente:
+        let txt = cores.join(' - ')
+        console.log(txt)
+        console.log(typeof(txt));
+        const arr = txt.split('*')
+        console.log(arr)
+
+        if (cores.includes("Blue")){
+            console.log("Tem")
+        }else{
+            console.log("Não tem")
+        }
+
+
+        //usando for em lista de numeros 
+        const numeros = [1, 2, 4, 5.8, 6, 10.6, 8]
+
+        for (let i = 0; i < numeros.length; i++){
+            console.log(i, numeros[i]);
+            
+        }
+
+        let soma = 0
+        for (let i = 0; i < numeros.length; i++){
+            soma = soma + numeros[i];
+        }
+        console.log(soma)
+//------------------------------------------------------------------------
+        //Template String
+        let nomeCompleto = `${nome} ${sobrenome}`;
+
+        console.log("nome: " + nomeCompleto);
+
+//------------------------------------------------------------------
+let isMember = true
+
+let shipping = (isMember ? 2 : 10);
+console.log("frete: " + shipping)
+
+let age = 14
+
+let isAdult = (age ? 'sim' : 'não');
+console.log(isAdult)
+//---------------------------------------------------------------------------------
+let profession = "bombeiro"
+
+console.log("Profissão: " + profession)
+switch(profession){
+    case 'fiscal':
+        console.log('Sua camisa vai Verde')
+    
+    break;
+    case 'bombeiro':
+        console.log('Sua camisa vai vermelho')
+    break;
+    case 'policial':
+        console.log('Sua camisa vai Azul')
+    break;
+    default:
+        console.log('Sua camisa vai PRETA')
+    break;
+}
+//--------------------------------------------------------------------------------------------
+
+// para executar uma variavel na string usa o ${text} usando craze, tambem chamado de template string
+alert(`O resultado foi: ${resultado}`);
+ou 
+alert(`O resultado foi: ${num1 + num2}`);
+//------------------------------------------------------------------------------------------
+        const nome = prompt ('Digite seu nome completo: ');
+        document.body.innerHTML += `O seu nome é: <strong>${nome}</strong> <br/>`;
+        document.body.innerHTML += `Seu nome tem ${nome.length} letras <br/>`;
+        document.body.innerHTML += `A segunda letra do seu nome é: ${nome[1]} <br/>`;
+        document.body.innerHTML += `Qual o primeiro índice da letra a no seu nome? ${nome.indexOf('a')} <br/>`;
+        document.body.innerHTML += `Qual o ultimo índice da letra a no seu nome? ${nome.lastIndexOf('a')} <br/>`;
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: ${nome.slice(-3)} <br/>`;
+        document.body.innerHTML += `as palavras do seu nome são: ${nome.split(' ')} <br/>`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: ${nome.toUpperCase()} <br/>`;
+        document.body.innerHTML += `seu nome com letras minúsculas: ${nome.toLowerCase()} <br/>`;
+//--------------------------------------------------------------------------------------------
+let num1 = 9.55541;
+// let num2 = Math.floor(num1);
+// let num2 = Math.ceil(num1);
+// let num2 = Match.round(num1);
+// -------------------------------------------
+const aleatorio = Math.random() * (10- 5) + 5;
+console.log(aleatorio);
+// -------------------------------------------------
+const alunos = ['Luiz', 'Otavio', 'jessica']
+
+const removido = alunos.pop(); ou //alunos.shift()`para remover do final`
+console.log(removido);
+console.log(alunos);
